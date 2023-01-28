@@ -32,6 +32,8 @@ async function bootstrap() {
   }
   // 启动文档
   generateDocument(app);
-  await app.listen(3010);
+  await app.listen(3000, '0.0.0.0', () => {
+    console.log('success  ---', 'http://localhost:3000/api/doc');
+  });
 }
 bootstrap();

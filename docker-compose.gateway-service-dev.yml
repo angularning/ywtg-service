@@ -1,0 +1,16 @@
+version: "3"
+services:
+  gateway-service-dev:
+    container_name: gateway-service-dev
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      RUNNING_ENV: 'dev'
+    networks:
+      - servicebus
+networks:
+  servicebus:
+    name: servicebus

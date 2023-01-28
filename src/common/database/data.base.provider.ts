@@ -8,12 +8,13 @@ const { MYSQL_CONFIG } = getConfig();
 const my = {
   ...MYSQL_CONFIG,
   type: databaseType,
-  entities: [
-    path.join(
-      __dirname,
-      `../../**/**/*.${MYSQL_CONFIG.entities}.entity{.ts,.js}`,
-    ),
-  ],
+  entities: [path.join(__dirname, `../../**/**/*.entity{.ts,.js}`)],
+  // entities: [
+  //   path.join(
+  //     __dirname,
+  //     `../../**/**/*.${MYSQL_CONFIG.entities}.entity{.ts,.js}`,
+  //   ),
+  // ],
 };
 const myDatabase = new DataSource(my);
 

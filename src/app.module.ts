@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { NoticeModule } from './notice/notice.module';
 import { ConfigModule } from '@nestjs/config';
 import { getConfig } from './utils';
+import { BannerModule } from './banner/banner.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { getConfig } from './utils';
       load: [getConfig],
     }),
     NoticeModule,
+    BannerModule,
   ],
   controllers: [AppController],
   providers: [AppService],

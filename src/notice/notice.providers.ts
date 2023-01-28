@@ -1,4 +1,4 @@
-import { base_message_info } from './entities/notice.mysql.entity';
+import { base_message_info } from './entities/notice.entity';
 export const NoticeProviders = {
   provide: 'NOTICE_REPOSITORY',
   useFactory: async (AppDataSource) =>
